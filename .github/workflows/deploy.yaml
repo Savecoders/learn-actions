@@ -10,8 +10,11 @@ jobs:
   deploy-firstclass:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4 # para clonar el repositorio
+      - uses: actions/setup-node@v4 # para instalar la versión especificada
+        with:
+          node-version: "20"
       - run: echo "Deploying first class application"
       - run: echo "This is a placeholder for the actual deployment steps"
       - run: echo "deploy node version"
-      - run: node -v
+      - run: node -v # para verificar la versión de Node.js
