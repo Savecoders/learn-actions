@@ -10,6 +10,7 @@ jobs:
   deploy-firstclass:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: echo "Deploying first class application"
       - run: echo "This is a placeholder for the actual deployment steps"
       - run: echo "deploy node version"
